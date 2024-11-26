@@ -4,35 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3684959c-b81e-4ed2-be21-0a7141290df7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/djangoWeather.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoWeather/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoWeather/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoWeather/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoWeather/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/djangoWeather/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weather/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weather/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weather/static/css/base_weather.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weather/static/css/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weather/static/css/profile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weather/static/css/register.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weather/static/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weather/static/js/theme.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weather/static/js/weather.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weather/templates/weather/authorization/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weather/templates/weather/authorization/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weather/templates/weather/profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/weather/templates/weather/weather.html" afterDir="false" />
+    <list default="true" id="3684959c-b81e-4ed2-be21-0a7141290df7" name="Changes" comment="Плохо реализован профиль">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoWeather/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoWeather/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +29,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Alliaxei&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Alliaxei/Weather.git&quot;,
+    &quot;accountId&quot;: &quot;181b38e2-c953-4914-ad1b-5d984fc887b6&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -151,11 +137,33 @@
       <workItem from="1732448619385" duration="9599000" />
       <workItem from="1732511034578" duration="7356000" />
       <workItem from="1732528005015" duration="4334000" />
-      <workItem from="1732608144882" duration="625000" />
+      <workItem from="1732608144882" duration="1181000" />
+      <workItem from="1732610696658" duration="446000" />
     </task>
+    <task id="LOCAL-00001" summary="Плохо реализован профиль">
+      <option name="closed" value="true" />
+      <created>1732609129263</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1732609129263</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Плохо реализован профиль">
+      <option name="closed" value="true" />
+      <created>1732609310483</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1732609310483</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Плохо реализован профиль" />
+    <option name="LAST_COMMIT_MESSAGE" value="Плохо реализован профиль" />
   </component>
 </project>
