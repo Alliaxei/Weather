@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Профиль</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+</head>
+<body>
+<div class="profile-container">
+    <h2>Настройки профиля</h2>
+    <form class="profile-form">
+        <!-- Имя -->
+        <div class="form-group">
+            <label for="name">Имя</label>
+            <input type="text" id="name" name="name" value="Ваше имя" placeholder="Введите ваше имя">
+        </div>
+
+        <!-- Логин -->
+        <div class="form-group">
+            <label for="username">Логин</label>
+            <input type="text" id="username" name="username" value="your_username" placeholder="Введите ваш логин">
+        </div>
+
+        <!-- Пароль -->
+        <div class="form-group">
+            <label for="password">Пароль</label>
+            <input type="password" id="password" name="password" placeholder="Введите новый пароль">
+        </div>
+
+        <!-- Город -->
+        <div class="form-group">
+            <label for="city">Город по умолчанию</label>
+            <select id="city" name="city">
+                <option value="moscow">Москва</option>
+                <option value="stpetersburg">Санкт-Петербург</option>
+                <option value="kazan">Казань</option>
+                <option value="novosibirsk">Новосибирск</option>
+            </select>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn save-btn">Сохранить изменения</button>
+        </div>
+    </form>
+     <div class="go-home">
+        <a href="/" class="btn home-btn">На главную</a>
+    </div>
+</div>
+
+</body>
+</html>

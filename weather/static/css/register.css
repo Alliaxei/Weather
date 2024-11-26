@@ -1,0 +1,192 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.register-container {
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px 20px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.register-container h2 {
+    color: #4a90e2;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.register-container form div {
+    margin-bottom: 15px;
+}
+.sign-in {
+    color: #4a90e2;
+    text-decoration: none;
+}
+.sign-in:hover {
+     text-decoration: underline;
+}
+
+.register-container label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.register-container input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    background-color: #f9fafb;
+    transition: box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.register-container input:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.4);
+    outline: none;
+}
+
+.register-container button {
+    width: 100%;
+    background-color: #4a90e2;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.register-container button:hover {
+    background-color: #357ab8;
+}
+
+.register-container button:active {
+    background-color: #285a8a;
+}
+
+.register-container .messages {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    color: #721c24;
+    font-size: 14px;
+    list-style: none;
+}
+
+.register-container p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.register-container p a {
+    color: #4a90e2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.register-container p a:hover {
+    color: #357ab8;
+}
+body.dark-theme a {
+    color: #b6cefd; /* Светлый акцент для ссылок */
+}
+
+body.dark-theme a:hover {
+    color: #ffffff; /* Белый текст на наведении */
+}
+/* Темная тема */
+body.dark-theme {
+    background-color: #333; /* Фон */
+    color: #f0f4f8; /* Текст */
+}
+
+body.dark-theme .register-container {
+    background-color: #444; /* Фон контейнера */
+    color: #f0f4f8; /* Текст */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Заголовок в темной теме */
+body.dark-theme .register-container h2 {
+    color: #b6cefd; /* Акцентный цвет */
+}
+
+/* Поля ввода */
+body.dark-theme .register-container input {
+    background-color: #555; /* Темный фон */
+    color: #f0f4f8; /* Светлый текст */
+    border: 1px solid #666; /* Темная граница */
+}
+
+body.dark-theme .register-container input:focus {
+    border-color: #b6cefd; /* Акцентная граница при фокусе */
+    box-shadow: 0 0 8px rgba(182, 206, 253, 0.4);
+}
+
+/* Кнопка */
+body.dark-theme .register-container button {
+    background-color: #555; /* Темный фон */
+    color: #f0f4f8; /* Светлый текст */
+    border: 1px solid #666; /* Темная граница */
+}
+
+body.dark-theme .register-container button:hover {
+    background-color: #777; /* Более светлый фон на наведении */
+}
+
+body.dark-theme .register-container button:active {
+    background-color: #999; /* Еще светлее при нажатии */
+}
+
+/* Сообщения */
+body.dark-theme .register-container .messages {
+    background-color: #4a4a4a; /* Темный фон */
+    border: 1px solid #666; /* Темная граница */
+    color: #ff9999; /* Светлый текст */
+}
+
+/* Текст и ссылки */
+body.dark-theme .register-container p a {
+    color: #b6cefd; /* Светлый акцент для ссылок */
+}
+
+body.dark-theme .register-container p a:hover {
+    color: #ffffff; /* Белый текст на наведении */
+}
+
+body.dark-theme .register-container label {
+    color: #ccc; /* Светлый текст метки */
+}
+
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+</head>
+<body>
+<div class="register-container">
+        <a href="/" class="home-link">На главную</a>
+        <h2>Регистрация</h2>
+        <form method="POST">
+            {% csrf_token %}
+            <div>
+                <label for="first_name">Имя:</label>
+                <input type="text" id="first_name" name="first_name" required>
+            </div>
+             <div>
+                <label for="username">Логин:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div>
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div>
+                <label for="confirm_password">Подтвердите пароль:</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+            </div>
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <p>
+            Уже есть аккаунт? <a href="{% url 'login' %}" class="sign-in">Войти</a>
+        </p>
+    </div>
+   {% load static %}
+    <script src="{% static 'js/theme.js' %}"></script>
+</body>
+</html>

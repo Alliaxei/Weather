@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/base_weather.css' %}">
+    <link rel="stylesheet" href="{% static 'css/theme_weather.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+
+    {#Для иконок#}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">Weather App</h1>
+        {% if not user.is_authenticated %}
+             <div class="user-dropdown">
+                 <div class="theme-toggle">
+                            <span id="theme-toggle" class="theme-icon">
+                                <i class="fas fa-sun"></i>
+                                <i class="fas fa-moon"></i>
+                            </span>
+                        </div>
+                <a href="{% url 'login' %}" class="login-button">Войти</a>
+             </div>
+        {% else %}
+                <div class="user-dropdown">
+                    <!-- Переключение темы -->
+                    <div class="theme-toggle">
+                        <span id="theme-toggle" class="theme-icon">
+                            <i class="fas fa-sun"></i>
+                            <i class="fas fa-moon"></i>
+                        </span>
+                    </div>
+
+                    <!-- Имя пользователя -->
+                    <a href="#" class="username" onclick="toggleDropdown()">{{ user.first_name }}</a>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <a href="{% url 'profile' %}"class="dropdown-item">Профиль</a>
+                        <a href="{% url 'logout' %}" class="dropdown-item logout-button">Выйти</a>
+                    </div>
+                </div>
+        {% endif %}
+    </header>
+    <div class="city-search">
+        <form method="get" action="{% url 'weather' %}">
+            <input type="text" name="city" id="city-search" placeholder="Введите город" value="{{ city }}" required autocomplete="off">
+            <button type="submit">Показать погоду</button>
+        </form>
+    </div>
+    <main class="main-content">
+        <div class="scroll-wrapper">
+         {% if error_message %}
+                <div class="error-message">{{ error_message }}</div>
+            {% else %}
+                <div class="card-container scrollable">
+                    {% for day in weather_data %}
+                    <div class="weather-card">
+                        <h3 class="day-name">{{ day.date }}</h3>
+                        <h3 class="day-name"> {{ day.weekday }}</h3>
+                        <img class="weather-icon" src="https://openweathermap.org/img/wn/{{ day.icon }}@2x.png" alt="{{ day.description }}">
+                        <p class="temperature">{{ day.temp }}°C</p>
+                        <p class="description">{{ day.description }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Weather App. Все права защищены.</p>
+    </footer>
+    {% load static %}
+    <script src="{% static 'js/weather.js' %}"></script>
+</body>
+</html>
