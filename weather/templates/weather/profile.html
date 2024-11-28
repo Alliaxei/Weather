@@ -8,44 +8,54 @@
 </head>
 <body>
 <div class="profile-container">
-    <h2>Настройки профиля</h2>
-    <form class="profile-form">
+    <a href="/" class="home-link">На главную</a>
+    <h2>Профиль</h2>
+    <form class="profile-form" method="POST" action="{% url 'editProfile' %}">
+        {% csrf_token %}
         <!-- Имя -->
         <div class="form-group">
             <label for="name">Имя</label>
-            <input type="text" id="name" name="name" value="Ваше имя" placeholder="Введите ваше имя">
+            <input type="text" id="name" name="name" placeholder="Введите ваше имя" value="{{ first_name }}" required="required">
         </div>
 
         <!-- Логин -->
         <div class="form-group">
             <label for="username">Логин</label>
-            <input type="text" id="username" name="username" value="your_username" placeholder="Введите ваш логин">
+            <input type="text" id="username" name="username" placeholder="Введите ваш логин" value="{{ username }}" required="required">
+        </div>
+
+        <!-- Старый пароль -->
+        <div class="form-group">
+            <label for="password_old">Старый пароль</label>
+            <input type="password" id="password_old" name="password_old" placeholder="Старый пароль" required="required">
         </div>
 
         <!-- Пароль -->
         <div class="form-group">
-            <label for="password">Пароль</label>
+            <label for="password">Новый пароль</label>
             <input type="password" id="password" name="password" placeholder="Введите новый пароль">
         </div>
 
         <!-- Город -->
         <div class="form-group">
             <label for="city">Город по умолчанию</label>
-            <select id="city" name="city">
-                <option value="moscow">Москва</option>
-                <option value="stpetersburg">Санкт-Петербург</option>
-                <option value="kazan">Казань</option>
-                <option value="novosibirsk">Новосибирск</option>
-            </select>
+            <input type="text" id="city" name="city" placeholder="Город по умолчанию" value="{{ city }}" required="required">
         </div>
-
+        {% if messages %}
+        <div class="alert-container">
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+        {% endif %}
         <div class="form-actions">
             <button type="submit" class="btn save-btn">Сохранить изменения</button>
+            <button type="submit" formaction="{% url 'deleteProfile' %}" class="btn delete-btn">Удалить профиль</button>
         </div>
+
     </form>
-     <div class="go-home">
-        <a href="/" class="btn home-btn">На главную</a>
-    </div>
 </div>
 
 </body>

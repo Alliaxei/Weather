@@ -38,7 +38,7 @@
                     <!-- Имя пользователя -->
                     <a href="#" class="username" onclick="toggleDropdown()">{{ user.first_name }}</a>
                     <div class="dropdown-menu" id="dropdownMenu">
-                        <a href="{% url 'profile' %}"class="dropdown-item">Профиль</a>
+                        <a href="{% url 'profile' %}" class="dropdown-item">Профиль</a>
                         <a href="{% url 'logout' %}" class="dropdown-item logout-button">Выйти</a>
                     </div>
                 </div>
@@ -57,16 +57,36 @@
             {% else %}
                 <div class="card-container scrollable">
                     {% for day in weather_data %}
-                    <div class="weather-card">
+                    <div class="weather-card" onclick="loadWeatherDetails('{{ day.date }}')">
                         <h3 class="day-name">{{ day.date }}</h3>
                         <h3 class="day-name"> {{ day.weekday }}</h3>
-                        <img class="weather-icon" src="https://openweathermap.org/img/wn/{{ day.icon }}@2x.png" alt="{{ day.description }}">
+                        <div class="modal-icon-container">
+                             <img class="weather-icon" src="https://openweathermap.org/img/wn/{{ day.icon }}@2x.png" alt="{{ day.description }}">
+                        </div>
+
                         <p class="temperature">{{ day.temp }}°C</p>
                         <p class="description">{{ day.description }}</p>
                     </div>
                     {% endfor %}
                 </div>
             {% endif %}
+        </div>
+            <!-- Модальное окно -->
+       <div id="weatherModal" class="modal" style="display: none">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h3 id="modal-date"></h3>
+                <h4 id="modal-weekday"></h4>
+                <div id="modal-icon-container">
+                    <img id="modal-icon" src="" alt="Иконка погоды">
+                </div>
+                <p><span id="modal-description"></span></p>
+                <p><strong>t-Тек: </strong><span id="modal-temperature"></span>°C</p>
+                <p><strong>t-Мин: </strong><span id="modal-temp-min"></span>°C</p>
+                <p><strong>t-Макс: </strong><span id="modal-temp-max"></span>°C</p>
+                <p><strong>Влажность: </strong><span id="modal-humidity"></span>%</p>
+                <p><strong>Скорость ветра: </strong><span id="modal-wind-speed"></span> км/ч</p>
+            </div>
         </div>
     </main>
 
