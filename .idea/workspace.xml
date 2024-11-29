@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3684959c-b81e-4ed2-be21-0a7141290df7" name="Changes" comment="Версия для деплоя (Без мобильной адаптации)">
+
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/djangoWeather/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoWeather/settings.py" afterDir="false" />
     </list>
@@ -46,9 +47,11 @@
     &quot;accountId&quot;: &quot;181b38e2-c953-4914-ad1b-5d984fc887b6&quot;
   }
 }</component>
+
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/weather/views.py" root0="FORCE_HIGHLIGHTING" />
   </component>
+
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -148,72 +151,42 @@
       <workItem from="1732528005015" duration="4334000" />
       <workItem from="1732608144882" duration="1181000" />
       <workItem from="1732610696658" duration="446000" />
-      <workItem from="1732683960220" duration="5318000" />
-      <workItem from="1732697040020" duration="2102000" />
-      <workItem from="1732700214525" duration="2125000" />
-      <workItem from="1732709054101" duration="3380000" />
-      <workItem from="1732720654938" duration="1604000" />
-      <workItem from="1732771350849" duration="4458000" />
-      <workItem from="1732777131319" duration="2301000" />
-      <workItem from="1732780044657" duration="1157000" />
-      <workItem from="1732781246767" duration="22000" />
-      <workItem from="1732783127343" duration="4981000" />
-      <workItem from="1732866496378" duration="2483000" />
-    </task>
-    <task id="LOCAL-00001" summary="Плохо реализован профиль">
-      <option name="closed" value="true" />
-      <created>1732609129263</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1732609129263</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Плохо реализован профиль">
-      <option name="closed" value="true" />
-      <created>1732609310483</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1732609310483</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Плохо реализован профиль">
-      <option name="closed" value="true" />
-      <created>1732787698925</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1732787698925</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Не до конца реализована инфомация в карточке и в подробной инфомрации">
-      <option name="closed" value="true" />
-      <created>1732787756138</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1732787756138</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Всё окончено, возможны небольшие доработки в будущем">
-      <option name="closed" value="true" />
-      <created>1732868307503</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1732868307503</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Версия для деплоя (Без мобильной адаптации)">
-      <option name="closed" value="true" />
-      <created>1732868520098</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1732868520098</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+<task id="LOCAL-00001" summary="Плохо реализован профиль">
+  <option name="closed" value="true" />
+  <created>1732609129263</created>
+  <option name="number" value="00001" />
+  <option name="presentableId" value="LOCAL-00001" />
+  <option name="project" value="LOCAL" />
+  <updated>1732609129263</updated>
+</task>
+<task id="LOCAL-00002" summary="Плохо реализован профиль">
+  <option name="closed" value="true" />
+  <created>1732609310483</created>
+  <option name="number" value="00002" />
+  <option name="presentableId" value="LOCAL-00002" />
+  <option name="project" value="LOCAL" />
+  <updated>1732609310483</updated>
+</task>
+<!-- Добавлены новые workItem из ветки Updating-Weather -->
+<workItem from="1732683960220" duration="5318000" />
+<workItem from="1732697040020" duration="2102000" />
+<workItem from="1732700214525" duration="2125000" />
+<workItem from="1732709054101" duration="3380000" />
+<workItem from="1732720654938" duration="1604000" />
+<workItem from="1732771350849" duration="4458000" />
+<workItem from="1732777131319" duration="2301000" />
+<workItem from="1732780044657" duration="1157000" />
+<workItem from="1732781246767" duration="22000" />
+<workItem from="1732783127343" duration="4981000" />
+<workItem from="1732866496378" duration="2483000" />
+</task>
+<option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+
   <component name="Vcs.Log.Tabs.Properties">
     <option name="RECENT_FILTERS">
       <map>
@@ -263,5 +236,6 @@
     <MESSAGE value="Всё окончено, возможны небольшие доработки в будущем" />
     <MESSAGE value="Версия для деплоя (Без мобильной адаптации)" />
     <option name="LAST_COMMIT_MESSAGE" value="Версия для деплоя (Без мобильной адаптации)" />
+
   </component>
 </project>
