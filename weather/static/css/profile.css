@@ -15,6 +15,21 @@ body {
     padding: 20px;
 }
 
+.home-link {
+    align-self: flex-start;
+    margin-bottom: 20px;
+    font-size: 1em;
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+
+.home-link:hover {
+    color: #357ab9;
+}
+
 /* Контейнер профиля */
 .profile-container {
     background-color: #fff;
@@ -77,14 +92,145 @@ input:focus, select:focus {
     transition: background-color 0.3s;
 }
 
-.btn:hover {
+
+.form-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.alert {
+    display: block;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.delete-btn {
+    background-color: transparent;
+    color: #ff6a6a;
+    border: none;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    cursor: pointer;
+    text-decoration: underline;
+    border-radius: 3px;
+}
+
+.delete-btn:hover {
+    color: #ff3333;
+    text-decoration: none;
+}
+.alert-success {
+    background-color: #d4edda;
+    color: #58acfd;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+/* Темная тема */
+body.dark-theme {
+    background-color: #333;
+    color: #f7f7f7;
+}
+
+/* Ссылки в темной теме */
+body.dark-theme .home-link {
+    color: #f7f7f7;
+}
+
+body.dark-theme .home-link:hover {
+    color: #ffffff;
+}
+
+/* Контейнер профиля в темной теме */
+body.dark-theme .profile-container {
+    background-color: #444;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Заголовок в темной теме */
+body.dark-theme h2 {
+    color: #f7f7f7;
+}
+
+/* Стили для формы в темной теме */
+body.dark-theme .profile-form input,
+body.dark-theme .profile-form select {
+    background-color: #555;
+    border: 2px solid #666;
+    color: #f7f7f7;
+}
+
+body.dark-theme .profile-form input:focus,
+body.dark-theme .profile-form select:focus {
+    border-color: #4a90e2;
+}
+
+/* Кнопки в темной теме */
+body.dark-theme .btn {
     background-color: #357ab9;
+    color: #fff;
 }
 
-.save-btn {
-    align-self: center;
+body.dark-theme .delete-btn {
+    color: #ff6a6a;
 }
 
+body.dark-theme .delete-btn:hover {
+    color: #ff3333;
+}
+
+/* Стили для alert в темной теме */
+body.dark-theme .alert-success {
+    background-color: #3c763d;
+    color: #d4edda;
+}
+
+body.dark-theme .alert-error {
+    background-color: #721c24;
+    color: #f8d7da;
+}
+
+/* Мобильная адаптация в темной теме */
+body.dark-theme .profile-container {
+    background-color: #444;
+}
+
+body.dark-theme label,
+body.dark-theme a {
+    color: #efefef;
+}
+
+body.dark-theme .save-btn {
+    background-color: #343434;
+    color: #fff;
+    transition: background-color 0.3s, transform 0.3s; /* Анимация при наведении */
+}
+
+body.dark-theme .save-btn:hover {
+    background-color: #727272;
+    transform: scale(1.05); /* Эффект увеличения при наведении */
+}
+
+/* Кнопка "Удалить профиль" в темной теме */
+body.dark-theme .delete-btn {
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    text-decoration: underline;
+    font-size: 1em;
+    transition: color 0.3s; /* Анимация при наведении */
+}
+
+body.dark-theme .delete-btn:hover {
+    color: #ff6a6a;
+}
 /* Мобильная адаптация */
 @media (max-width: 600px) {
     .profile-container {
