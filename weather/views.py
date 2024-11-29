@@ -12,6 +12,7 @@ from django.shortcuts import render, redirect
 import requests
 import locale
 from babel.dates import format_date, parse_date
+from collections import defaultdict
 
 MONTHS = {
     "января": "01",
@@ -64,15 +65,21 @@ def main_window(request):
         if data.get('cod') != '200':
             error_message = "Такое место не найдено."
         else:
-            print("Данные " + str(data))
+            # Группировка данных по датам
+            daily_data = defaultdict(list)
             for item in data['list']:
                 date_time = datetime.strptime(item['dt_txt'], '%Y-%m-%d %H:%M:%S')
+                date_str = date_time.strftime('%Y-%m-%d')  # Группируем по дате
+                daily_data[date_str].append(item)
+
+            # Обработка сгруппированных данных
+            for date, items in daily_data.items():
+                avg_temp = round(sum(item['main']['temp'] for item in items) / len(items))  # Средняя температура
                 weather_data.append({
-                    "date": format_date(date_time, format='d MMMM y', locale='ru'),
-                    "time": date_time.strftime('%H:%M'),
-                    "temp": round(item['main']['temp'],),
-                    "icon": item['weather'][0]['icon'],
-                    "description": item['weather'][0]['description'].capitalize(),
+                    "date": format_date(datetime.strptime(date, '%Y-%m-%d'), format='d MMMM y', locale='ru'),
+                    "icon": items[0]['weather'][0]['icon'],  # Берем иконку из первой записи
+                    "description": items[0]['weather'][0]['description'].capitalize(),
+                    "avg_temp": avg_temp,
                 })
     except requests.exceptions.RequestException as e:
         print(f"Ошибка при запросе данных: {e}")
@@ -90,6 +97,7 @@ def get_weather_details(request):
     city = request.GET.get('city', 'Бали')
     API_KEY = '076346f55592d4a002d75b2175ed273c'
     url = f"https://api.openweathermap.org/data/2.5/forecast?q={city}&appid={API_KEY}&units=metric&lang=ru"
+
     try:
         response = requests.get(url)
         response.raise_for_status()  # Проверка на успешность запроса
@@ -98,6 +106,8 @@ def get_weather_details(request):
         formatted_date = convert_date(date)
         min_temp = float('inf')
         max_temp = float('-inf')
+        total_temp = 0  # Для вычисления средней температуры
+        count = 0       # Счетчик временных интервалов
         icon = None
         description = None
         humidity = None
@@ -111,19 +121,26 @@ def get_weather_details(request):
                 min_temp = min(min_temp, item['main']['temp_min'])
                 max_temp = max(max_temp, item['main']['temp_max'])
 
-                if icon is None:
+                # Суммируем температуру и увеличиваем счетчик
+                total_temp += item['main']['temp']
+                count += 1
+
+                if icon is None:  # Берем значения иконки и описания только из первой записи
                     icon = item['weather'][0]['icon']
                     description = item['weather'][0]['description'].capitalize()
                     humidity = item['main']['humidity']
                     wind_speed = item['wind']['speed']
 
-        if min_temp == float('inf') or max_temp == float('-inf'):
+        if count == 0:
             return JsonResponse({"error": "Не удалось получить данные для указанной даты."})
+
+        avg_temp = round(total_temp / count, 1)  # Средняя температура
+
         detailed_data = {
             "date": date,
             "weekday": weekday,
             "icon": icon,
-            "temp": round(item['main']['temp'], 1),
+            "temp": avg_temp,  # Средняя температура
             "temp_min": round(min_temp, 1),
             "temp_max": round(max_temp, 1),
             "description": description,
@@ -208,7 +225,6 @@ def profile_view(request):
 
     return render(request, 'weather/profile.html', context)
 def edit_profile(request):
-    print("Метод " + request.method)
     if request.method == "POST":
         user = request.user
         old_password = request.POST['password_old']

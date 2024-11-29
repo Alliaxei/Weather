@@ -4,21 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3684959c-b81e-4ed2-be21-0a7141290df7" name="Changes" comment="Плохо реализован профиль">
-      <change afterPath="$PROJECT_DIR$/weather/static/js/profile.js" afterDir="false" />
+    <list default="true" id="3684959c-b81e-4ed2-be21-0a7141290df7" name="Changes" comment="Не до конца реализована инфомация в карточке и в подробной инфомрации">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoWeather/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoWeather/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoWeather/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoWeather/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/weather/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather/serializers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather/static/css/base_weather.css" beforeDir="false" afterPath="$PROJECT_DIR$/weather/static/css/base_weather.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weather/static/css/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/weather/static/css/profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather/static/js/weather.js" beforeDir="false" afterPath="$PROJECT_DIR$/weather/static/js/weather.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weather/templates/weather/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/weather/templates/weather/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weather/templates/weather/weather.html" beforeDir="false" afterPath="$PROJECT_DIR$/weather/templates/weather/weather.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/weather/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weather/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/weather/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,6 +71,7 @@
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "Updating-Weather",
     "ignore.virus.scanning.warn.message": "true",
@@ -169,7 +161,8 @@
       <workItem from="1732777131319" duration="2301000" />
       <workItem from="1732780044657" duration="1157000" />
       <workItem from="1732781246767" duration="22000" />
-      <workItem from="1732783127343" duration="3797000" />
+      <workItem from="1732783127343" duration="4981000" />
+      <workItem from="1732866496378" duration="1768000" />
     </task>
     <task id="LOCAL-00001" summary="Плохо реализован профиль">
       <option name="closed" value="true" />
@@ -187,7 +180,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732609310483</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Плохо реализован профиль">
+      <option name="closed" value="true" />
+      <created>1732787698925</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1732787698925</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Не до конца реализована инфомация в карточке и в подробной инфомрации">
+      <option name="closed" value="true" />
+      <created>1732787756138</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1732787756138</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,6 +247,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Плохо реализован профиль" />
-    <option name="LAST_COMMIT_MESSAGE" value="Плохо реализован профиль" />
+    <MESSAGE value="Не до конца реализована инфомация в карточке и в подробной инфомрации" />
+    <option name="LAST_COMMIT_MESSAGE" value="Не до конца реализована инфомация в карточке и в подробной инфомрации" />
   </component>
 </project>
